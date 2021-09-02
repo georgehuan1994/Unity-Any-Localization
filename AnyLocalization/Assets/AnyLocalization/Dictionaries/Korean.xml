@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Dictionaries>
+  <Dictionary Language="Korean">
+    <String Key="AnyLocalization.Website" Value="https://gorh.cn/" />
+    <String Key="Dialog.AskQuitGame.Message" Value="게임 로그아웃을 원하십니까?" />
+    <String Key="Dialog.AskQuitGame.Title" Value="아웃 확인" />
+    <String Key="Dialog.CancelButton" Value="취소" />
+    <String Key="Dialog.ConfirmButton" Value="확인" />
+    <String Key="Edit.HowToEditLanguages" Value="" />
+    <String Key="Edit.HowToOpen" Value="" />
+    <String Key="Game.Introduction" Value="Game Framework 는 유니티 엔진 Unity 버전을 이용한 게임 시스템 입니다. 주로 게임 개발과정에서 자주 사용하는 모듈을 캡슐화 하여 개발 과정을 규범화 하고 개발 속도를 높이며 게임의 콜리티를 보장해 드릴 수 있습니다." />
+    <String Key="Game.Name" Value="Any Localization - 데모 프로그램" />
+    <String Key="Game.Summary" Value="이 데모는 Game Framework 게임 시스템을 사용하여 만든 게임 데모 입니다.게임 시스템의 사용방법을 설명해 드리기 위해 예를 들어 만든 데모이기에 사용방법을 참조해 주시길 바랍니다." />
+    <String Key="Menu.Edit" Value="편집 하 다." />
+    <String Key="Menu.Usage" Value="사용 방법" />
+    <String Key="Setting.Language" Value="언어" />
+    <String Key="Setting.LanguageTips" Value="사용언어를 바꾼후 리부팅이 필요 합니다" />
+    <String Key="Usage.1" Value="&lt;b&gt;사용 방법 1:&lt;/b&gt;\n&lt;b&gt;&lt;color=#D50004&gt;Text&lt;/color&gt;&lt;/b&gt; / &lt;b&gt;&lt;color=#D50004&gt;TextMesh Pro&lt;/color&gt;&lt;/b&gt; 구성 요소 뒤에 &lt;b&gt;&lt;color=#D50004&gt;Localization&lt;/color&gt;&lt;/b&gt; 구성 요 소 를 추가 하고 원 하 는 key 를 선택 하 십시오." />
+    <String Key="Usage.2" Value="&lt;b&gt;사용 방법 2:&lt;/b&gt;" />
+    <String Key="Usage.Code" Value="&lt;color=#569CD6&gt;using&lt;/color&gt; AnyLocalization; \ntext = &lt;color=#4EC9B0&gt;ANL&lt;/color&gt;.&lt;color=#DCDCAA&gt;GetString&lt;/color&gt;(&lt;color=#D69D85&gt;&quot;key&quot;&lt;/color&gt;);" />
+    <String Key="Usage.Necessary" Value="&lt;b&gt;필요했어:&lt;/b&gt;\n&lt;b&gt;&lt;color=#D50004&gt;Any Localization&lt;/color&gt;&lt;/b&gt; 을 첫 번 째 장면 에 추가 합 니 다." />
+  </Dictionary>
+</Dictionaries>

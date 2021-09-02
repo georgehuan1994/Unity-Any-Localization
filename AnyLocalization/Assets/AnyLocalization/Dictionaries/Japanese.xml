@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Dictionaries>
+  <Dictionary Language="Japanese">
+    <String Key="AnyLocalization.Website" Value="https://gorh.cn/" />
+    <String Key="Dialog.AskQuitGame.Message" Value="ゲームの終了を確認しますか？" />
+    <String Key="Dialog.AskQuitGame.Title" Value="" />
+    <String Key="Dialog.CancelButton" Value="" />
+    <String Key="Dialog.ConfirmButton" Value="" />
+    <String Key="Edit.HowToEditLanguages" Value="" />
+    <String Key="Edit.HowToOpen" Value="" />
+    <String Key="Game.Introduction" Value="" />
+    <String Key="Game.Name" Value="" />
+    <String Key="Game.Summary" Value="" />
+    <String Key="Menu.Edit" Value="編集" />
+    <String Key="Menu.Usage" Value="使い方" />
+    <String Key="Setting.Language" Value="" />
+    <String Key="Setting.LanguageTips" Value="" />
+    <String Key="Usage.1" Value="&lt;b&gt;使い方 1:&lt;/b&gt;\n&lt;b&gt;&lt;color=#D50004&gt;Text&lt;/color&gt;&lt;/b&gt; / &lt;b&gt;&lt;color=#D50004&gt;Text Mesh Pro&lt;/color&gt;&lt;/b&gt; コンポーネントの後ろに &lt;b&gt;&lt;color=#D50004&gt;Localization&lt;/color&gt;&lt;/b&gt; コンポーネントを追加して、あなたが欲しいkeyを選択します。" />
+    <String Key="Usage.2" Value="&lt;b&gt;使い方 2:&lt;/b&gt;" />
+    <String Key="Usage.Code" Value="&lt;color=#569CD6&gt;using&lt;/color&gt; AnyLocalization; \ntext = &lt;color=#4EC9B0&gt;ANL&lt;/color&gt;.&lt;color=#DCDCAA&gt;GetString&lt;/color&gt;(&lt;color=#D69D85&gt;&quot;key&quot;&lt;/color&gt;);" />
+    <String Key="Usage.Necessary" Value="&lt;b&gt;必要:&lt;/b&gt;\n&lt;b&gt;&lt;color=#D50004&gt;Any Localization&lt;/color&gt;&lt;/b&gt; をあなたの最初の場面に加えてください。" />
+  </Dictionary>
+</Dictionaries>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Dictionaries>
+  <Dictionary Language="ChineseTraditional">
+    <String Key="AnyLocalization.Website" Value="https://gorh.cn/" />
+    <String Key="Dialog.AskQuitGame.Message" Value="是否確認退出遊戲？" />
+    <String Key="Dialog.AskQuitGame.Title" Value="確認退出" />
+    <String Key="Dialog.CancelButton" Value="取消" />
+    <String Key="Dialog.ConfirmButton" Value="確定" />
+    <String Key="Edit.HowToEditLanguages" Value="" />
+    <String Key="Edit.HowToOpen" Value="" />
+    <String Key="Game.Introduction" Value="Game Framework 是基於 Unity 引擎的遊戲框架，主要對遊戲開發過程中常用模組進行了封裝，很大程度地規範開發過程、加快開發速度並保證產品品質。" />
+    <String Key="Game.Name" Value="Any Localization - 演示程式" />
+    <String Key="Game.Summary" Value="這是一個使用 Game Framework 遊戲框架製作的遊戲演示專案，目的是對此遊戲框架的使用方法做一些示範，供使用者參考。" />
+    <String Key="Menu.Edit" Value="編輯" />
+    <String Key="Menu.Usage" Value="用法" />
+    <String Key="Setting.Language" Value="語言" />
+    <String Key="Setting.LanguageTips" Value="更改語言需要重啟遊戲" />
+    <String Key="Usage.1" Value="&lt;b&gt;使用方法1：&lt;/b&gt;\n將 &lt;b&gt;&lt;color=#D50004&gt;Localization&lt;/color&gt;&lt;/b&gt; 組件添加到 &lt;b&gt;&lt;color=#D50004&gt;Text&lt;/color&gt;&lt;/b&gt; / &lt;b&gt;&lt;color=#D50004&gt;TexMesh Pro&lt;/color&gt;&lt;/b&gt; 組件之後，並選擇要使用的多語言主鍵。" />
+    <String Key="Usage.2" Value="&lt;b&gt;使用方法 2:&lt;/b&gt;" />
+    <String Key="Usage.Code" Value="&lt;color=#569CD6&gt;using&lt;/color&gt; AnyLocalization; \ntext = &lt;color=#4EC9B0&gt;ANL&lt;/color&gt;.&lt;color=#DCDCAA&gt;GetString&lt;/color&gt;(&lt;color=#D69D85&gt;&quot;key&quot;&lt;/color&gt;);" />
+    <String Key="Usage.Necessary" Value="&lt;b&gt;必要的:&lt;/b&gt;\n将 &lt;b&gt;&lt;color=#D50004&gt;Any Localizations&lt;/color&gt;&lt;/b&gt; 組件添加到你的第一個場景中。" />
+  </Dictionary>
+</Dictionaries>
