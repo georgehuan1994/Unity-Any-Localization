@@ -20,6 +20,16 @@ namespace AnyLocalization
 
         private void Start()
         {
+            ShowText();
+        }
+
+        private void OnEnable()
+        {
+            ShowText();
+        }
+
+        public void ShowText()
+        {
             if (m_Key.Equals(string.Empty))
             {
                 return;

@@ -15,7 +15,7 @@ namespace AnyLocalization
 
         public static void Init()
         {
-            EditorWindow languageEditorWindow = GetWindow(typeof(LanguageEditorWindow), false, "Any Localization", true);
+            EditorWindow languageEditorWindow = GetWindow(typeof(LanguageEditorWindow), false, "Languages", true);
             languageEditorWindow.maxSize = languageEditorWindow.minSize = new Vector2(600, 500);
 
             languageStates = new Dictionary<Language, bool>();

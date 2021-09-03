@@ -22,70 +22,75 @@ namespace AnyLocalization
     public sealed class AnyLocalizationComponent : MonoBehaviour
     {
         public static AnyLocalizationComponent Instance { get; set; }
+        public static Dictionary<string, string> strKeyValuePairs = new Dictionary<string, string>();
+
+        [SerializeField]
+        public bool EditorMode = false;
 
         [SerializeField] 
         public Language EditorLanguage = Language.English;
-        public static Language SystemLanguage = Language.English;
-        public static Language UserSpecifiedLanguage = Language.Unspecified;
+
+        [SerializeField]
+        public Language DefaultLanguage = Language.English;
 
         [SerializeField]
         public string StreamPath = ANL.XMLStreamingAssetsPath;
 
-        public static Dictionary<string, string> strKeyValuePairs = new Dictionary<string, string>();
+        [SerializeField]
+        public GameObject UICanvas = null;
 
         /// <summary>
         /// Gets or sets the localized language <br/>获取或设置本地化语言 <br/>로 컬 언어 가 져 오기 또는 설정 <br/>ローカライズ言語の取得または設定
         /// </summary>
         public Language Language { get; set; }
 
-
         private void Awake()
         {
             Instance = this;
             DontDestroyOnLoad(Instance.gameObject);
 
-            Language = Language.English;
-            SystemLanguage = (Language)System.Enum.Parse(typeof(Language), Application.systemLanguage.ToString());
+            DefaultLanguage = (Language)System.Enum.Parse(typeof(Language), Application.systemLanguage.ToString());
+            Debug.Log($"System Language: {DefaultLanguage}");
 
-            if (Utility.IsEditor())
+            if (EditorMode)
             {
                 Language = EditorLanguage;
             }
             else
             {
-                Language = SystemLanguage;
+                Language = (Language)PlayerPrefs.GetInt("Setting.Language", 0);
             }
 
-            LoadData();
-        }
-
-        public void LoadData()
-        {
             if (Language == Language.Unspecified)
             {
-                Debug.LogError("Language Unspecified!");
-                return;
+                Language = DefaultLanguage;
+                Debug.LogWarning("Language Unspecified! Using Default Language!");
             }
 
+            LoadXmlStream();
+        }
+
+        private void LoadXmlStream()
+        {
             XmlDocument xmlDocument = new XmlDocument();
 
-            string xmlStreamingAssetsPath = $"{Application.streamingAssetsPath}/{StreamPath}/{Language}.xml";
-            Debug.Log($"XML Path: {xmlStreamingAssetsPath}");
-            Debug.Log("Loading Languages XML....");
+            string xmlStreamPath = $"{Application.streamingAssetsPath}/{StreamPath}/{Language}.xml";
+            Debug.Log($"XML Stream Path: {xmlStreamPath}");
+            Debug.Log("Loading Languages XML Stream....");
 
-            if (Utility.IsEditor() || Utility.IsPC() || Utility.IsIOS())
-            {
-                if (File.Exists(xmlStreamingAssetsPath)) xmlDocument.Load(xmlStreamingAssetsPath);
-            }
-            else
+            if (Utility.IsAndroid())
             {
                 int frame = 0;
-                UnityWebRequest request = new UnityWebRequest(xmlStreamingAssetsPath);
+                UnityWebRequest request = new UnityWebRequest(xmlStreamPath);
                 while (!request.isDone)
                 {
                     if (++frame >= 500) return;
                 }
                 xmlDocument.Load(request.downloadHandler.text);
+            }
+            else
+            {
+                if (File.Exists(xmlStreamPath)) xmlDocument.Load(xmlStreamPath);
             }
 
             XmlNodeList xmlNodeList = null;
@@ -96,9 +101,11 @@ namespace AnyLocalization
             }
             catch
             {
-                throw new System.Exception($"Non-existent Language:{Language}"); 
+                throw new System.Exception($"Non-existent Language:{Language}");
             }
-            
+
+            strKeyValuePairs = new Dictionary<string, string>();
+
             foreach (XmlNode item in xmlNodeList)
             {
                 string key = item.Attributes["Key"].Value;
@@ -106,13 +113,20 @@ namespace AnyLocalization
                 strKeyValuePairs.Add(key, value);
             }
             Debug.Log("Load Simple Languages XML Succeed.");
+        }
 
+        public void SetLanguage(Language language)
+        {
+            Language = language;
+            PlayerPrefs.SetInt("Setting.Language", (int)language);
+            LoadXmlStream();
+            UICanvas.BroadcastMessage("ShowText");
         }
 
         public string GetString(string key)
         {
             if (strKeyValuePairs.TryGetValue(key, out string value)) return System.Text.RegularExpressions.Regex.Unescape(value);
-            Debug.LogError("Non-existent Key:" + key);
+            Debug.LogWarning("Non-existent Key:" + key);
             return $"[No Key]{key}";
         }
     }

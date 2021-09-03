@@ -14,6 +14,10 @@ namespace AnyLocalization
 
         public static string GetString(string key)
         {
+            if (AnyLocalizationComponent.Instance == null)
+            {
+                return null;
+            }
             return AnyLocalizationComponent.Instance.GetString(key);
         }
 
@@ -27,6 +31,19 @@ namespace AnyLocalization
             { 
                 AnyLocalizationComponent.Instance.Language = value; 
             }
+        }
+
+        public static Language DefaultLanguage
+        {
+            get
+            {
+                return AnyLocalizationComponent.Instance.DefaultLanguage;
+            }
+        }
+
+        public static void SetLanguage(Language language)
+        {
+            AnyLocalizationComponent.Instance.SetLanguage(language);
         }
     }
 }

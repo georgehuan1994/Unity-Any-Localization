@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Dictionaries>
   <Dictionary Language="ChineseTraditional">
-    <String Key="AnyLocalization.Website" Value="https://gorh.cn/" />
+    <String Key="AnyLocalization.Website" Value="https://gorh.cn/any-localization" />
     <String Key="Dialog.AskQuitGame.Message" Value="是否確認退出遊戲？" />
     <String Key="Dialog.AskQuitGame.Title" Value="確認退出" />
     <String Key="Dialog.CancelButton" Value="取消" />
