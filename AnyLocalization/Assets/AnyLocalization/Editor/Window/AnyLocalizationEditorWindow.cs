@@ -1,10 +1,6 @@
-﻿//------------------------------------------------------------
-// Any Localization
-// Author: George Huan
-// Date: 2020-11-12
-// Homepage: 
-// Feedback: 
-//------------------------------------------------------------
+﻿
+// Any Localization - © 2020-2021 George Huan. All rights reserved
+// http://gorh.cn/any-localization/
 
 
 using UnityEngine;
@@ -90,19 +86,18 @@ namespace AnyLocalization
                 {
                     EditorGUILayout.EndHorizontal();
                     EditorGUILayout.HelpBox("Select XML Dictionaries Folder First", MessageType.Info);
-                    
                     return;
+                }
+                else
+                {
+                    if (GUILayout.Button("Languages", GUILayout.MinHeight(15), GUILayout.MaxWidth(120)))
+                        LanguageEditorWindow.Init();
                 }
                 if (languages.Count == 0)
                 {
                     EditorGUILayout.EndHorizontal();
                     EditorGUILayout.HelpBox("Can't find any language dictionary under the path!", MessageType.Warning);
                     return;
-                }
-                if (XMLDictionariesPath != "")
-                {
-                    if (GUILayout.Button("Languages", GUILayout.MinHeight(15), GUILayout.MaxWidth(120)))
-                    LanguageEditorWindow.Init();
                 }
             }
             EditorGUILayout.EndHorizontal();
@@ -112,14 +107,9 @@ namespace AnyLocalization
             DrawTextScrollView();
             DrawTextEditingZone();
             DrawActionBar();
-
-            if (Event.current.type == EventType.MouseDown)
-            {
-                GUI.FocusControl(null);
-                EditorGUI.FocusTextInControl(null);
-                GUIUtility.keyboardControl = 0;
-            }
+            ClearFocus();
         }
+
 
 
         /// <summary>
@@ -649,6 +639,16 @@ namespace AnyLocalization
         {
             var keyValuePairs = from pair in strKeyValuePairs orderby pair.Key ascending select pair;
             strKeyValuePairs = keyValuePairs.ToDictionary(pair => pair.Key, pair => pair.Value);
+        }
+
+        private void ClearFocus()
+        {
+            if (Event.current.type == EventType.MouseDown)
+            {
+                GUI.FocusControl(null);
+                EditorGUI.FocusTextInControl(null);
+                GUIUtility.keyboardControl = 0;
+            }
         }
     }
 }

@@ -1,10 +1,7 @@
-﻿//------------------------------------------------------------
-// Any Localization
-// Author: George Huan
-// Date: 2020-11-12
-// Homepage: 
-// Feedback: 
-//------------------------------------------------------------
+﻿
+// Any Localization - © 2020-2021 George Huan. All rights reserved
+// http://gorh.cn/any-localization/
+
 
 namespace AnyLocalization
 {

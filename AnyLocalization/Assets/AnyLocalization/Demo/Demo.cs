@@ -1,4 +1,9 @@
-﻿using UnityEngine;
+﻿
+// Any Localization - © 2020-2021 George Huan. All rights reserved
+// http://gorh.cn/any-localization/
+
+
+using UnityEngine;
 using UnityEngine.UI;
 
 using AnyLocalization;
@@ -32,7 +37,6 @@ public class Demo : MonoBehaviour
                 value = 5;
                 break;
             default:
-                value = 0;
                 break;
         }
 

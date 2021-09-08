@@ -7,17 +7,16 @@
     <String Key="Dialog.CancelButton" Value="CANCEL" />
     <String Key="Dialog.ConfirmButton" Value="OK" />
     <String Key="Edit.HowToEditLanguages" Value="" />
-    <String Key="Edit.HowToOpen" Value="" />
-    <String Key="Game.Introduction" Value="Game Framework is literally a game framework, based on Unity game engine. It encapsulates commonly used game modules during development, and, to a large degree, standardises the process, enhances the development speed and ensures the product quality." />
+    <String Key="Edit.HowToEditDictionary" Value="" />
     <String Key="Game.Name" Value="Any Localization - Demo program" />
-    <String Key="Game.Summary" Value="This project is a demo game made with Game Framework. It's intended to demonstrate how this game framework should be used for developers' reference." />
+    <String Key="Game.Overview" Value="&lt;b&gt;Overview&lt;/b&gt;\nAny Localization is a lightweight Unity plug-in that can help you quickly complete the text localization of unity applications.Any Localization has the characteristics of &lt;b&gt; highly modular &lt;/b&gt;, &lt;b&gt; friendly interaction &lt;/b&gt;, &lt;b&gt; easy to expand &lt;/b&gt;. You can use it independently or easily embed it into any framework." />
     <String Key="Menu.Edit" Value="Edit" />
     <String Key="Menu.Usage" Value="Usage" />
     <String Key="Setting.Language" Value="Language" />
     <String Key="Setting.LanguageTips" Value="Language change demands restarting." />
-    <String Key="Usage.1" Value="&lt;b&gt;Usage 1:&lt;/b&gt;\nAdd the &lt;b&gt;&lt;color=#D50004&gt;Localization&lt;/color&gt;&lt;/b&gt; component after the &lt;b&gt;&lt;color=#D50004&gt;Text&lt;/color&gt;&lt;/b&gt; / &lt;b&gt;&lt;color=#D50004&gt;Textmesh Pro&lt;/color&gt;&lt;/b&gt; component, and select the  key." />
-    <String Key="Usage.2" Value="&lt;b&gt;Usage 2:&lt;/b&gt;" />
+    <String Key="Usage.Auto" Value="&lt;b&gt;Auto Assignment:&lt;/b&gt;\nAdd the &lt;b&gt;Auto Localization&lt;/b&gt; component after the  &lt;b&gt;Text&lt;/b&gt; / &lt;b&gt;TexMesh Pro&lt;/b&gt; / &lt;b&gt;TexMesh ProUGUI&lt;/b&gt; component, and select the  key." />
     <String Key="Usage.Code" Value="&lt;color=#569CD6&gt;using&lt;/color&gt; AnyLocalization; \ntext = &lt;color=#4EC9B0&gt;ANL&lt;/color&gt;.&lt;color=#DCDCAA&gt;GetString&lt;/color&gt;(&lt;color=#D69D85&gt;&quot;key&quot;&lt;/color&gt;);" />
-    <String Key="Usage.Necessary" Value="&lt;b&gt;Necessary:&lt;/b&gt;\nAdd the &lt;b&gt;&lt;color=#D50004&gt;Any Localization&lt;/color&gt;&lt;/b&gt; component to yout first Scene." />
+    <String Key="Usage.Manual" Value="&lt;b&gt;Manual Assignment:&lt;/b&gt;" />
+    <String Key="Usage.Necessary" Value="&lt;b&gt;Necessary:&lt;/b&gt;\nAdd the &lt;b&gt;Any Localization&lt;/b&gt; component to yout first Scene." />
   </Dictionary>
 </Dictionaries>

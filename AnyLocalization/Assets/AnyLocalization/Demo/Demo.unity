@@ -1092,7 +1092,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1899584661}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1340,7 +1340,7 @@ GameObject:
   - component: {fileID: 389464423}
   - component: {fileID: 389464422}
   m_Layer: 5
-  m_Name: Text_Usage1
+  m_Name: Text_Usage_Auto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1391,7 +1391,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d6ec1ee1f403cd4183fb6efb1d21247, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Key: Usage.1
+  m_Key: Usage.Auto
 --- !u!114 &389464424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2263,8 +2263,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 478, y: -49.5}
-  m_SizeDelta: {x: 903.17175, y: 70.03424}
+  m_AnchoredPosition: {x: 319.39, y: -49.5}
+  m_SizeDelta: {x: 585.9607, y: 70.03424}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &732276392
 MonoBehaviour:
@@ -2298,7 +2298,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Any Localization
+  m_Text: Any Localization - Demo program
 --- !u!222 &732276393
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2553,6 +2553,121 @@ Transform:
   m_Father: {fileID: 213020047}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &977752999
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 977753000}
+  - component: {fileID: 977753004}
+  - component: {fileID: 977753003}
+  - component: {fileID: 977753002}
+  - component: {fileID: 977753001}
+  m_Layer: 5
+  m_Name: Text_Overview
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &977753000
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 977752999}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1899584661}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 487.01093, y: 0}
+  m_SizeDelta: {x: 974.02185, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &977753001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 977752999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 0
+  m_VerticalFit: 2
+--- !u!114 &977753002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 977752999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d6ec1ee1f403cd4183fb6efb1d21247, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Key: Game.Overview
+--- !u!114 &977753003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 977752999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 19
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1.3
+  m_Text: '<b>Overview</b>
+
+    Any Localization is a lightweight Unity plug-in that
+    can help you quickly complete the text localization of unity applications.
+
+    Any
+    Localization has the characteristics of <b> highly modular </b>, <b> friendly
+    interaction </b>, <b> easy to expand </b>. You can use it independently or easily
+    embed it into any framework.'
+--- !u!222 &977753004
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 977752999}
+  m_CullTransparentMesh: 0
 --- !u!1 &978857562
 GameObject:
   m_ObjectHideFlags: 0
@@ -3096,7 +3211,7 @@ GameObject:
   - component: {fileID: 1089445876}
   - component: {fileID: 1089445875}
   m_Layer: 5
-  m_Name: Text_Usage2
+  m_Name: Text_Usage_Manual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3147,7 +3262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d6ec1ee1f403cd4183fb6efb1d21247, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Key: Usage.2
+  m_Key: Usage.Manual
 --- !u!114 &1089445877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3218,11 +3333,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb62557b275891a47be4f7c8227f3c2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EditorMode: 0
-  EditorLanguage: 14
   DefaultLanguage: 14
   StreamPath: AnyLocalization/XML
-  UICanvas: {fileID: 874333665}
 --- !u!4 &1090301855
 Transform:
   m_ObjectHideFlags: 0
@@ -4443,7 +4555,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1814838194}
   m_Layer: 5
-  m_Name: Usage2
+  m_Name: Usage_Manual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4650,7 +4762,7 @@ GameObject:
   - component: {fileID: 1893047789}
   - component: {fileID: 1893047788}
   m_Layer: 5
-  m_Name: Text_HowToOpen
+  m_Name: Text_HowToEditDictionary
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4668,7 +4780,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1899584661}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -4701,7 +4813,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d6ec1ee1f403cd4183fb6efb1d21247, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Key: Edit.HowToOpen
+  m_Key: Edit.HowToEditDictionary
 --- !u!114 &1893047790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4777,6 +4889,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 977753000}
   - {fileID: 1893047787}
   - {fileID: 268570563}
   m_Father: {fileID: 1407591408}

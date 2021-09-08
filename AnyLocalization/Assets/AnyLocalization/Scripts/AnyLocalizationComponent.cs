@@ -1,16 +1,14 @@
-﻿//------------------------------------------------------------
-// Any Localization
-// Author: George Huan
-// Date: 2020-11-12
-// Homepage: 
-// Feedback: 
-//------------------------------------------------------------
+﻿
+// Any Localization - © 2020-2021 George Huan. All rights reserved
+// http://gorh.cn/any-localization/
+
 
 using System.Collections.Generic;
 using System.IO;
 using System.Xml;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 
 namespace AnyLocalization
 {
@@ -22,22 +20,14 @@ namespace AnyLocalization
     public sealed class AnyLocalizationComponent : MonoBehaviour
     {
         public static AnyLocalizationComponent Instance { get; set; }
+
         public static Dictionary<string, string> strKeyValuePairs = new Dictionary<string, string>();
-
-        [SerializeField]
-        public bool EditorMode = false;
-
-        [SerializeField] 
-        public Language EditorLanguage = Language.English;
 
         [SerializeField]
         public Language DefaultLanguage = Language.English;
 
         [SerializeField]
         public string StreamPath = ANL.XMLStreamingAssetsPath;
-
-        [SerializeField]
-        public GameObject UICanvas = null;
 
         /// <summary>
         /// Gets or sets the localized language <br/>获取或设置本地化语言 <br/>로 컬 언어 가 져 오기 또는 설정 <br/>ローカライズ言語の取得または設定
@@ -49,17 +39,9 @@ namespace AnyLocalization
             Instance = this;
             DontDestroyOnLoad(Instance.gameObject);
 
-            DefaultLanguage = (Language)System.Enum.Parse(typeof(Language), Application.systemLanguage.ToString());
-            Debug.Log($"System Language: {DefaultLanguage}");
+            //Debug.Log($"System Language: {(Language)System.Enum.Parse(typeof(Language), Application.systemLanguage.ToString())}");
 
-            if (EditorMode)
-            {
-                Language = EditorLanguage;
-            }
-            else
-            {
-                Language = (Language)PlayerPrefs.GetInt("Setting.Language", 0);
-            }
+            Language = (Language)PlayerPrefs.GetInt("Setting.Language", 0);
 
             if (Language == Language.Unspecified)
             {
@@ -120,7 +102,12 @@ namespace AnyLocalization
             Language = language;
             PlayerPrefs.SetInt("Setting.Language", (int)language);
             LoadXmlStream();
-            UICanvas.BroadcastMessage("ShowText");
+
+            Scene scene = SceneManager.GetActiveScene();
+            foreach (var obj in scene.GetRootGameObjects())
+            {
+                obj.BroadcastMessage("ShowText", SendMessageOptions.DontRequireReceiver);
+            }
         }
 
         public string GetString(string key)

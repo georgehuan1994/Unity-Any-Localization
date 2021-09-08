@@ -13,8 +13,8 @@ using System.Reflection;
 
 namespace AnyLocalization
 {
-    [CustomEditor(typeof(Localization))]
-    public class LocalizationEditor : Editor
+    [CustomEditor(typeof(AutoLocalization))]
+    public class LocalizationInspector : Editor
     {
         private SerializedProperty key;
         private string searchText = string.Empty;

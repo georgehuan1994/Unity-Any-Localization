@@ -7,17 +7,16 @@
     <String Key="Dialog.CancelButton" Value="取消" />
     <String Key="Dialog.ConfirmButton" Value="确定" />
     <String Key="Edit.HowToEditLanguages" Value="&lt;b&gt;如何添加/删除某种语言？&lt;/b&gt;\n在 Any Localization 编辑窗口中点击 Languages 按钮（在窗口的右上角，请先指定 XML Dictionary Path），然后在新窗口中选择你要使用的语言。为了数据安全，若要删除某种语言，请在资源管理器中手动删除相关的 XML文件。" />
-    <String Key="Edit.HowToOpen" Value="&lt;b&gt;如何打开 Any Localization 编辑器?&lt;/b&gt;\n1. 在菜单栏打开 Window &gt; Any Localization\n2. 选择 XML Dictionary Path（字典默认存放在 AnyLocalization / Dictionary 文件夹中）" />
-    <String Key="Game.Introduction" Value="Game Framework 是基于 Unity 引擎的游戏框架，主要对游戏开发过程中常用模块进行了封装，很大程度地规范开发过程、加快开发速度并保证产品质量。" />
+    <String Key="Edit.HowToEditDictionary" Value="&lt;b&gt;如何编辑词典?&lt;/b&gt;\n1. 在菜单栏打开 Window &gt; Any Localization\n2. 选择 XML Dictionary Path（字典默认存放在 AnyLocalization / Dictionary 文件夹中）" />
     <String Key="Game.Name" Value="Any Localization - 演示程序" />
-    <String Key="Game.Summary" Value="这是一个使用 Game Framework 游戏框架制作的游戏演示项目，目的是对此游戏框架的使用方法做一些示范，供使用者参考。" />
+    <String Key="Game.Overview" Value="&lt;b&gt;概述&lt;/b&gt;\nAny Localization 是一款轻量级的 Unity 插件，可帮助您快速地完成 Unity 应用程序的文本本地化工作。Any Localization 具有 &lt;b&gt;高度模块化&lt;/b&gt;、&lt;b&gt;交互友好&lt;/b&gt;、&lt;b&gt;易于扩展&lt;/b&gt; 的特点，您可以独立使用，也可以轻松的将它嵌入任何框架中。" />
     <String Key="Menu.Edit" Value="编辑" />
     <String Key="Menu.Usage" Value="用例" />
     <String Key="Setting.Language" Value="语言" />
     <String Key="Setting.LanguageTips" Value="更改语言需要重启游戏" />
-    <String Key="Usage.1" Value="&lt;b&gt;使用方法 1：&lt;/b&gt;\n将 &lt;b&gt;&lt;color=#D50004&gt;Localization&lt;/color&gt;&lt;/b&gt; 组件添加到 &lt;b&gt;&lt;color=#D50004&gt;Text&lt;/color&gt;&lt;/b&gt; / &lt;b&gt;&lt;color=#D50004&gt;TexMesh Pro&lt;/color&gt;&lt;/b&gt; 组件之后，并选择要使用的多语言主键。" />
-    <String Key="Usage.2" Value="&lt;b&gt;使用方法 2：&lt;/b&gt;" />
+    <String Key="Usage.Auto" Value="&lt;b&gt;自动赋值：&lt;/b&gt;\n将 &lt;b&gt;Auto Localization&lt;/b&gt; 组件添加到 &lt;b&gt;Text&lt;/b&gt; / &lt;b&gt;TexMesh Pro&lt;/b&gt; / &lt;b&gt;TexMesh ProUGUI&lt;/b&gt; 组件之后，并选择要使用的多语言主键。" />
     <String Key="Usage.Code" Value="&lt;color=#569CD6&gt;using&lt;/color&gt; AnyLocalization; \ntext = &lt;color=#4EC9B0&gt;ANL&lt;/color&gt;.&lt;color=#DCDCAA&gt;GetString&lt;/color&gt;(&lt;color=#D69D85&gt;&quot;key&quot;&lt;/color&gt;);" />
-    <String Key="Usage.Necessary" Value="&lt;b&gt;必要的:&lt;/b&gt;\n将 &lt;b&gt;&lt;color=#D50004&gt;Any Localization&lt;/color&gt;&lt;/b&gt; 组件添加到你的第一个场景中。" />
+    <String Key="Usage.Manual" Value="&lt;b&gt;手动赋值：&lt;/b&gt;" />
+    <String Key="Usage.Necessary" Value="&lt;b&gt;必要的:&lt;/b&gt;\n将 &lt;b&gt;Any Localization&lt;/b&gt; 组件添加到你的第一个场景中。" />
   </Dictionary>
 </Dictionaries>

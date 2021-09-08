@@ -3,21 +3,20 @@
   <Dictionary Language="Japanese">
     <String Key="AnyLocalization.Website" Value="https://gorh.cn/any-localization" />
     <String Key="Dialog.AskQuitGame.Message" Value="ゲームの終了を確認しますか？" />
-    <String Key="Dialog.AskQuitGame.Title" Value="" />
-    <String Key="Dialog.CancelButton" Value="" />
-    <String Key="Dialog.ConfirmButton" Value="" />
+    <String Key="Dialog.AskQuitGame.Title" Value="終了する確認" />
+    <String Key="Dialog.CancelButton" Value="取り消し" />
+    <String Key="Dialog.ConfirmButton" Value="を選択します" />
     <String Key="Edit.HowToEditLanguages" Value="" />
-    <String Key="Edit.HowToOpen" Value="" />
-    <String Key="Game.Introduction" Value="" />
-    <String Key="Game.Name" Value="" />
-    <String Key="Game.Summary" Value="" />
+    <String Key="Edit.HowToEditDictionary" Value="" />
+    <String Key="Game.Name" Value="Any Localization - デモプログラム" />
+    <String Key="Game.Overview" Value="&lt;b&gt;概要&lt;/b&gt;\nAny Localization は軽量級の Unity プラグインで、Unityアプリケーションのテキストローカライズ作業を迅速に行うことができます。Any Localization は  &lt;b&gt;高度モジュール化&lt;/b&gt;、&lt;b&gt;インタラクティブ友好&lt;/b&gt;、&lt;b&gt;拡張しやすいという&lt;/b&gt;  特徴を持っています。独立して使ってもいいし、どんなフレームにも簡単に組み込むことができます。" />
     <String Key="Menu.Edit" Value="編集" />
     <String Key="Menu.Usage" Value="使い方" />
     <String Key="Setting.Language" Value="" />
     <String Key="Setting.LanguageTips" Value="" />
-    <String Key="Usage.1" Value="&lt;b&gt;使い方 1:&lt;/b&gt;\n&lt;b&gt;&lt;color=#D50004&gt;Text&lt;/color&gt;&lt;/b&gt; / &lt;b&gt;&lt;color=#D50004&gt;Text Mesh Pro&lt;/color&gt;&lt;/b&gt; コンポーネントの後ろに &lt;b&gt;&lt;color=#D50004&gt;Localization&lt;/color&gt;&lt;/b&gt; コンポーネントを追加して、あなたが欲しいkeyを選択します。" />
-    <String Key="Usage.2" Value="&lt;b&gt;使い方 2:&lt;/b&gt;" />
+    <String Key="Usage.Auto" Value="&lt;b&gt;自動代入:&lt;/b&gt;\n &lt;b&gt;Text&lt;/b&gt; / &lt;b&gt;TexMesh Pro&lt;/b&gt; / &lt;b&gt;TexMesh ProUGUI&lt;/b&gt; コンポーネントの後ろに &lt;b&gt;Auto Localization&lt;/b&gt; コンポーネントを追加して、あなたが欲しいkeyを選択します。" />
     <String Key="Usage.Code" Value="&lt;color=#569CD6&gt;using&lt;/color&gt; AnyLocalization; \ntext = &lt;color=#4EC9B0&gt;ANL&lt;/color&gt;.&lt;color=#DCDCAA&gt;GetString&lt;/color&gt;(&lt;color=#D69D85&gt;&quot;key&quot;&lt;/color&gt;);" />
-    <String Key="Usage.Necessary" Value="&lt;b&gt;必要:&lt;/b&gt;\n&lt;b&gt;&lt;color=#D50004&gt;Any Localization&lt;/color&gt;&lt;/b&gt; をあなたの最初の場面に加えてください。" />
+    <String Key="Usage.Manual" Value="&lt;b&gt;手動代入:&lt;/b&gt;" />
+    <String Key="Usage.Necessary" Value="&lt;b&gt;必要:&lt;/b&gt;\n&lt;b&gt;Any Localization&lt;/b&gt; をあなたの最初の場面に加えてください。" />
   </Dictionary>
 </Dictionaries>

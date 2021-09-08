@@ -1,10 +1,7 @@
-﻿//------------------------------------------------------------
-// Simple Languages
-// Author: George Huan
-// Date: 2020-11-12
-// Homepage: 
-// Feedback: 
-//------------------------------------------------------------
+﻿
+// Any Localization - © 2020-2021 George Huan. All rights reserved
+// http://gorh.cn/any-localization/
+
 
 using TMPro;
 using UnityEngine;
@@ -13,8 +10,8 @@ using UnityEngine.UI;
 namespace AnyLocalization
 {
     [DisallowMultipleComponent]
-    [AddComponentMenu("Any Localization/Localization")]
-    public class Localization : MonoBehaviour
+    [AddComponentMenu("Any Localization/Auto Localization")]
+    public class AutoLocalization : MonoBehaviour
     {
         [SerializeField] public string m_Key = string.Empty;
 
@@ -40,12 +37,21 @@ namespace AnyLocalization
             if (TryGetComponent(out Text text))
             {
                 text.text = path;
+                LayoutRebuilder.ForceRebuildLayoutImmediate(transform as RectTransform);
                 return;
             }
 
             if (TryGetComponent(out TextMeshProUGUI textMeshProUGUI))
             {
                 textMeshProUGUI.text = path;
+                LayoutRebuilder.ForceRebuildLayoutImmediate(transform as RectTransform);
+                return;
+            }
+
+            if (TryGetComponent(out TextMeshPro textMeshPro))
+            {
+                textMeshPro.text = path;
+                LayoutRebuilder.ForceRebuildLayoutImmediate(transform as RectTransform);
                 return;
             }
         }

@@ -1,4 +1,9 @@
-﻿using System;
+﻿
+// Any Localization - © 2020-2021 George Huan. All rights reserved
+// http://gorh.cn/any-localization/
+
+
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -45,6 +50,8 @@ namespace AnyLocalization
             if (GUILayout.Button("Apply", GUILayout.Height(30)))
             {
                 ChangeLanguages();
+                Close();
+                AnyLocalizationEditorWindow.LoadXmlFiles();
             }
         }
 
@@ -84,6 +91,14 @@ namespace AnyLocalization
                 XmlElement element = xmlDocument.CreateElement("String");
                 element.SetAttribute("Key", key);
                 element.SetAttribute("Value", string.Empty);
+                dictionary.AppendChild(element);
+            }
+
+            if (AnyLocalizationEditorWindow.strKeyValuePairs.Count == 0)
+            {
+                XmlElement element = xmlDocument.CreateElement("String");
+                element.SetAttribute("Key", "Example.Text");
+                element.SetAttribute("Value", "This is an <b>Any Localization</b> example text.");
                 dictionary.AppendChild(element);
             }
 
