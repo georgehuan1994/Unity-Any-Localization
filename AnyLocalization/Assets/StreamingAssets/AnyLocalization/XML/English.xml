@@ -1,21 +1,25 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Dictionaries>
   <Dictionary Language="English">
+    <String Key="AnyLocalization.Demo" Value="Any Localization - Demo program" />
+    <String Key="AnyLocalization.OnlineDocument" Value="&lt;b&gt;Online Document&lt;/b&gt;\nFor more detailed instructions, see the online documentation: &lt;color=#569CD6&gt;{0}&lt;/color&gt;" />
     <String Key="AnyLocalization.Website" Value="https://gorh.cn/any-localization" />
     <String Key="Dialog.AskQuitGame.Message" Value="Are you sure to quit the game?" />
     <String Key="Dialog.AskQuitGame.Title" Value="CONFIRM TO QUIT" />
     <String Key="Dialog.CancelButton" Value="CANCEL" />
     <String Key="Dialog.ConfirmButton" Value="OK" />
-    <String Key="Edit.HowToEditLanguages" Value="" />
-    <String Key="Edit.HowToEditDictionary" Value="" />
-    <String Key="Game.Name" Value="Any Localization - Demo program" />
-    <String Key="Game.Overview" Value="&lt;b&gt;Overview&lt;/b&gt;\nAny Localization is a lightweight Unity plug-in that can help you quickly complete the text localization of unity applications.Any Localization has the characteristics of &lt;b&gt; highly modular &lt;/b&gt;, &lt;b&gt; friendly interaction &lt;/b&gt;, &lt;b&gt; easy to expand &lt;/b&gt;. You can use it independently or easily embed it into any framework." />
+    <String Key="Edit.HowToEditEntries" Value="&lt;b&gt;How to edit enties?&lt;/b&gt; \n1. Open window &gt; any localization in the menu bar \n2. Specify the &lt;b&gt;XML Dictionary Path&lt;/b&gt; (the default location is the &quot;Anylocalization / Dictionary&quot; folder), and then you can view and edit the entries in the editor. You can also export all dictionaries as xlsx files and edit them with Excel." />
+    <String Key="Edit.HowToEditLanguages" Value="&lt;b&gt;How to add / remove a language?&lt;/b&gt; \nIn the Any Localization edit window, click the &lt;b&gt;Languages&lt;/b&gt; button (upper right corner), and then select the language you want to use, in the new window. For your data security, if you want to remove a language, please manually delete the XML file corresponding to the language type under the XML dictionary path in Explorer" />
+    <String Key="Edit.Overview" Value="&lt;b&gt;Overview&lt;/b&gt;\nAny Localization is a lightweight Unity plug-in that can help you quickly complete the text localization of unity applications.Any Localization has the characteristics of &lt;b&gt; highly modular &lt;/b&gt;, &lt;b&gt; friendly interaction &lt;/b&gt;, &lt;b&gt; easy to expand &lt;/b&gt;. You can use it independently or easily embed it into any framework." />
     <String Key="Menu.Edit" Value="Edit" />
     <String Key="Menu.Usage" Value="Usage" />
     <String Key="Setting.Language" Value="Language" />
-    <String Key="Setting.LanguageTips" Value="Language change demands restarting." />
     <String Key="Usage.Auto" Value="&lt;b&gt;Auto Assignment:&lt;/b&gt;\nAdd the &lt;b&gt;Auto Localization&lt;/b&gt; component after the  &lt;b&gt;Text&lt;/b&gt; / &lt;b&gt;TexMesh Pro&lt;/b&gt; / &lt;b&gt;TexMesh ProUGUI&lt;/b&gt; component, and select the  key." />
     <String Key="Usage.Code" Value="&lt;color=#569CD6&gt;using&lt;/color&gt; AnyLocalization; \ntext = &lt;color=#4EC9B0&gt;ANL&lt;/color&gt;.&lt;color=#DCDCAA&gt;GetString&lt;/color&gt;(&lt;color=#D69D85&gt;&quot;key&quot;&lt;/color&gt;);" />
+    <String Key="Usage.CodeWith1Placeholder" Value="text = &lt;color=#4EC9B0&gt;ANL&lt;/color&gt;.&lt;color=#DCDCAA&gt;GetString&lt;/color&gt;(&lt;color=#D69D85&gt;&quot;key&quot;&lt;/color&gt;, &lt;color=#D69D85&gt;&quot;arg0&quot;&lt;/color&gt;); &lt;color=#57A64A&gt; // The entry contains 1 placeholder {0}&lt;/color&gt;" />
+    <String Key="Usage.CodeWith2Placeholder" Value="text = &lt;color=#4EC9B0&gt;ANL&lt;/color&gt;.&lt;color=#DCDCAA&gt;GetString&lt;/color&gt;(&lt;color=#D69D85&gt;&quot;key&quot;&lt;/color&gt;, &lt;color=#D69D85&gt;&quot;arg0&quot;&lt;/color&gt;, &lt;color=#D69D85&gt;&quot;arg1&quot;&lt;/color&gt;); &lt;color=#57A64A&gt; // The entry contains 2 placeholders {0} {1}&lt;/color&gt;" />
+    <String Key="Usage.CodeWith3Placeholder" Value="text = &lt;color=#4EC9B0&gt;ANL&lt;/color&gt;.&lt;color=#DCDCAA&gt;GetString&lt;/color&gt;(&lt;color=#D69D85&gt;&quot;key&quot;&lt;/color&gt;, &lt;color=#D69D85&gt;&quot;arg0&quot;&lt;/color&gt;, &lt;color=#D69D85&gt;&quot;arg1&quot;&lt;/color&gt;, &lt;color=#D69D85&gt;&quot;arg2&quot;&lt;/color&gt;); &lt;color=#57A64A&gt; // The entry contains 3 placeholder {0} {1} {2}&lt;/color&gt;" />
+    <String Key="Usage.HowToChangeLanguage" Value="&lt;b&gt;How to change language at run time?&lt;/b&gt;" />
     <String Key="Usage.Manual" Value="&lt;b&gt;Manual Assignment:&lt;/b&gt;" />
     <String Key="Usage.Necessary" Value="&lt;b&gt;Necessary:&lt;/b&gt;\nAdd the &lt;b&gt;Any Localization&lt;/b&gt; component to yout first Scene." />
   </Dictionary>

@@ -1,21 +1,25 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Dictionaries>
   <Dictionary Language="ChineseTraditional">
+    <String Key="AnyLocalization.Demo" Value="Any Localization - 演示程式" />
+    <String Key="AnyLocalization.OnlineDocument" Value="&lt;b&gt;線上檔案&lt;/b&gt;\n更詳細的說明，請查看線上檔案：&lt;color=#569CD6&gt;{0}&lt;/color&gt;" />
     <String Key="AnyLocalization.Website" Value="https://gorh.cn/any-localization" />
     <String Key="Dialog.AskQuitGame.Message" Value="是否確認退出遊戲？" />
     <String Key="Dialog.AskQuitGame.Title" Value="確認退出" />
     <String Key="Dialog.CancelButton" Value="取消" />
     <String Key="Dialog.ConfirmButton" Value="確定" />
-    <String Key="Edit.HowToEditLanguages" Value="" />
-    <String Key="Edit.HowToEditDictionary" Value="" />
-    <String Key="Game.Name" Value="Any Localization - 演示程式" />
-    <String Key="Game.Overview" Value="&lt;b&gt;概述&lt;/b&gt;\nAny Localization 是一款轻量级的 Unity 挿件，可幫助您快速地完成 Unity 應用程序的文字當地語系化工作。Any Localization 具有 &lt;b&gt;高度模組化&lt;/b&gt;、&lt;b&gt;互動友好&lt;/b&gt;、&lt;b&gt;易於擴展&lt;/b&gt; 的特點，您可以獨立使用，也可以輕鬆的將它嵌入任何框架中。 " />
+    <String Key="Edit.HowToEditEntries" Value="&lt;b&gt;如何編輯詞條？&lt;/b&gt;\n1.在功能表列打開 Window &gt; Any Localization\n2.指定 XML Dictionary Path（默認位置為AnyLocalization / Dictionary 資料夾），然後您就可以在編輯器中查看與編輯詞條了。您也可以匯出為 xlsx 檔案，在Excel中編輯。 " />
+    <String Key="Edit.HowToEditLanguages" Value="&lt;b&gt;如何添加/删除某種語言？&lt;/b&gt;\n在 Any Localization 編輯視窗中點擊 Languages按鈕（右上角），然後在新窗口中選擇您要使用的語言。為了您的資料安全，若您要删除某種語言，請在資料總管中手動删除 XML Dictionary Path 下與語言類型對應的 XML 檔案" />
+    <String Key="Edit.Overview" Value="&lt;b&gt;概述&lt;/b&gt;\nAny Localization 是一款轻量级的 Unity 挿件，可幫助您快速地完成 Unity 應用程序的文字當地語系化工作。Any Localization 具有 &lt;b&gt;高度模組化&lt;/b&gt;、&lt;b&gt;互動友好&lt;/b&gt;、&lt;b&gt;易於擴展&lt;/b&gt; 的特點，您可以獨立使用，也可以輕鬆的將它嵌入任何框架中。 " />
     <String Key="Menu.Edit" Value="編輯" />
     <String Key="Menu.Usage" Value="用法" />
     <String Key="Setting.Language" Value="語言" />
-    <String Key="Setting.LanguageTips" Value="更改語言需要重啟遊戲" />
     <String Key="Usage.Auto" Value="&lt;b&gt;自動賦值：&lt;/b&gt;\n將 &lt;b&gt;Auto Localization&lt;/b&gt; 組件添加到 &lt;b&gt;Text&lt;/b&gt; / &lt;b&gt;TexMesh Pro&lt;/b&gt; / &lt;b&gt;TexMesh ProUGUI&lt;/b&gt; 組件之後，並選擇要使用的多語言主鍵。" />
     <String Key="Usage.Code" Value="&lt;color=#569CD6&gt;using&lt;/color&gt; AnyLocalization; \ntext = &lt;color=#4EC9B0&gt;ANL&lt;/color&gt;.&lt;color=#DCDCAA&gt;GetString&lt;/color&gt;(&lt;color=#D69D85&gt;&quot;key&quot;&lt;/color&gt;);" />
+    <String Key="Usage.CodeWith1Placeholder" Value="text = &lt;color=#4EC9B0&gt;ANL&lt;/color&gt;.&lt;color=#DCDCAA&gt;GetString&lt;/color&gt;(&lt;color=#D69D85&gt;&quot;key&quot;&lt;/color&gt;, &lt;color=#D69D85&gt;&quot;arg0&quot;&lt;/color&gt;); &lt;color=#57A64A&gt; // 詞條內包含 1 個預留位置 {0}&lt;/color&gt;" />
+    <String Key="Usage.CodeWith2Placeholder" Value="text = &lt;color=#4EC9B0&gt;ANL&lt;/color&gt;.&lt;color=#DCDCAA&gt;GetString&lt;/color&gt;(&lt;color=#D69D85&gt;&quot;key&quot;&lt;/color&gt;, &lt;color=#D69D85&gt;&quot;arg0&quot;&lt;/color&gt;, &lt;color=#D69D85&gt;&quot;arg1&quot;&lt;/color&gt;); &lt;color=#57A64A&gt; // 詞條內包含 2 個預留位置 {0} {1}&lt;/color&gt;" />
+    <String Key="Usage.CodeWith3Placeholder" Value="text = &lt;color=#4EC9B0&gt;ANL&lt;/color&gt;.&lt;color=#DCDCAA&gt;GetString&lt;/color&gt;(&lt;color=#D69D85&gt;&quot;key&quot;&lt;/color&gt;, &lt;color=#D69D85&gt;&quot;arg0&quot;&lt;/color&gt;, &lt;color=#D69D85&gt;&quot;arg1&quot;&lt;/color&gt;, &lt;color=#D69D85&gt;&quot;arg2&quot;&lt;/color&gt;); &lt;color=#57A64A&gt; // 詞條内包含 3 個預留位置 {0} {1} {2}&lt;/color&gt;" />
+    <String Key="Usage.HowToChangeLanguage" Value="&lt;b&gt;如何在運行時更改語言？&lt;/b&gt;" />
     <String Key="Usage.Manual" Value="&lt;b&gt;手動賦值 :&lt;/b&gt;" />
     <String Key="Usage.Necessary" Value="&lt;b&gt;必要的:&lt;/b&gt;\n将 &lt;b&gt;Any Localizations&lt;/b&gt; 組件添加到你的第一個場景中。" />
   </Dictionary>

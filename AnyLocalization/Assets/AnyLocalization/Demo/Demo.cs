@@ -10,9 +10,12 @@ using AnyLocalization;
 
 public class Demo : MonoBehaviour
 {
+    [SerializeField] private Text m_SeeOnlineDocument = null;
+
     private void Start()
     {
         SetDropdownValue();
+        m_SeeOnlineDocument.text = ANL.GetString("AnyLocalization.OnlineDocument", ANL.GetString("AnyLocalization.Website"));
     }
 
     public void SetDropdownValue()
@@ -66,15 +69,14 @@ public class Demo : MonoBehaviour
                 ANL.SetLanguage(ANL.DefaultLanguage);
                 break;
         }
+        m_SeeOnlineDocument.text = ANL.GetString("AnyLocalization.OnlineDocument", ANL.GetString("AnyLocalization.Website"));
     }
 
     public void Quit()
     {
-        if (Utility.IsEditor())
-        {
-            UnityEditor.EditorApplication.isPlaying = false;
-            return;
-        }
+        #if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+        #endif
         Application.Quit();
     }
 }

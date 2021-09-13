@@ -1,21 +1,25 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Dictionaries>
   <Dictionary Language="ChineseSimplified">
+    <String Key="AnyLocalization.Demo" Value="Any Localization - 演示程序" />
+    <String Key="AnyLocalization.OnlineDocument" Value="&lt;b&gt;在线文档&lt;/b&gt;\n更详细的说明，请查看在线文档：&lt;color=#569CD6&gt;{0}&lt;/color&gt;" />
     <String Key="AnyLocalization.Website" Value="https://gorh.cn/any-localization" />
     <String Key="Dialog.AskQuitGame.Message" Value="是否确认退出游戏？" />
     <String Key="Dialog.AskQuitGame.Title" Value="确认退出" />
     <String Key="Dialog.CancelButton" Value="取消" />
     <String Key="Dialog.ConfirmButton" Value="确定" />
-    <String Key="Edit.HowToEditLanguages" Value="&lt;b&gt;如何添加/删除某种语言？&lt;/b&gt;\n在 Any Localization 编辑窗口中点击 Languages 按钮（在窗口的右上角，请先指定 XML Dictionary Path），然后在新窗口中选择你要使用的语言。为了数据安全，若要删除某种语言，请在资源管理器中手动删除相关的 XML文件。" />
-    <String Key="Edit.HowToEditDictionary" Value="&lt;b&gt;如何编辑词典?&lt;/b&gt;\n1. 在菜单栏打开 Window &gt; Any Localization\n2. 选择 XML Dictionary Path（字典默认存放在 AnyLocalization / Dictionary 文件夹中）" />
-    <String Key="Game.Name" Value="Any Localization - 演示程序" />
-    <String Key="Game.Overview" Value="&lt;b&gt;概述&lt;/b&gt;\nAny Localization 是一款轻量级的 Unity 插件，可帮助您快速地完成 Unity 应用程序的文本本地化工作。Any Localization 具有 &lt;b&gt;高度模块化&lt;/b&gt;、&lt;b&gt;交互友好&lt;/b&gt;、&lt;b&gt;易于扩展&lt;/b&gt; 的特点，您可以独立使用，也可以轻松的将它嵌入任何框架中。" />
+    <String Key="Edit.HowToEditEntries" Value="&lt;b&gt;如何编辑词条？&lt;/b&gt;\n1. 在菜单栏打开 Window &gt; Any Localization\n2. 指定 XML Dictionary Path（默认位置为 AnyLocalization / Dictionary 文件夹），然后您就可以在编辑器中查看并编辑词条了。您也可以将所有字典的导出为 xlsx 文件，使用 Excel 来编辑。" />
+    <String Key="Edit.HowToEditLanguages" Value="&lt;b&gt;如何添加/删除某种语言？&lt;/b&gt;\n在 Any Localization 编辑窗口中点击 Languages 按钮（右上角），然后在新窗口中选择您要使用的语言。为了您的数据安全，若您要删除某种语言，请在资源管理器中手动删除 XML Dictionary Path 下与语言类型对应的 XML 文件" />
+    <String Key="Edit.Overview" Value="&lt;b&gt;概述&lt;/b&gt;\nAny Localization 是一款轻量级的 Unity 插件，可帮助您快速地完成 Unity 应用程序的文本本地化工作。Any Localization 具有 &lt;b&gt;高度模块化&lt;/b&gt;、&lt;b&gt;交互友好&lt;/b&gt;、&lt;b&gt;易于扩展&lt;/b&gt; 的特点，您可以独立使用，也可以轻松的将它嵌入任何框架中。" />
     <String Key="Menu.Edit" Value="编辑" />
     <String Key="Menu.Usage" Value="用例" />
     <String Key="Setting.Language" Value="语言" />
-    <String Key="Setting.LanguageTips" Value="更改语言需要重启游戏" />
     <String Key="Usage.Auto" Value="&lt;b&gt;自动赋值：&lt;/b&gt;\n将 &lt;b&gt;Auto Localization&lt;/b&gt; 组件添加到 &lt;b&gt;Text&lt;/b&gt; / &lt;b&gt;TexMesh Pro&lt;/b&gt; / &lt;b&gt;TexMesh ProUGUI&lt;/b&gt; 组件之后，并选择要使用的多语言主键。" />
     <String Key="Usage.Code" Value="&lt;color=#569CD6&gt;using&lt;/color&gt; AnyLocalization; \ntext = &lt;color=#4EC9B0&gt;ANL&lt;/color&gt;.&lt;color=#DCDCAA&gt;GetString&lt;/color&gt;(&lt;color=#D69D85&gt;&quot;key&quot;&lt;/color&gt;);" />
+    <String Key="Usage.CodeWith1Placeholder" Value="text = &lt;color=#4EC9B0&gt;ANL&lt;/color&gt;.&lt;color=#DCDCAA&gt;GetString&lt;/color&gt;(&lt;color=#D69D85&gt;&quot;key&quot;&lt;/color&gt;, &lt;color=#D69D85&gt;&quot;arg0&quot;&lt;/color&gt;); &lt;color=#57A64A&gt; // 词条内包含 1 个占位符 {0}&lt;/color&gt;" />
+    <String Key="Usage.CodeWith2Placeholder" Value="text = &lt;color=#4EC9B0&gt;ANL&lt;/color&gt;.&lt;color=#DCDCAA&gt;GetString&lt;/color&gt;(&lt;color=#D69D85&gt;&quot;key&quot;&lt;/color&gt;, &lt;color=#D69D85&gt;&quot;arg0&quot;&lt;/color&gt;, &lt;color=#D69D85&gt;&quot;arg1&quot;&lt;/color&gt;); &lt;color=#57A64A&gt; // 词条内包含 2 个占位符 {0} {1}&lt;/color&gt;" />
+    <String Key="Usage.CodeWith3Placeholder" Value="text = &lt;color=#4EC9B0&gt;ANL&lt;/color&gt;.&lt;color=#DCDCAA&gt;GetString&lt;/color&gt;(&lt;color=#D69D85&gt;&quot;key&quot;&lt;/color&gt;, &lt;color=#D69D85&gt;&quot;arg0&quot;&lt;/color&gt;, &lt;color=#D69D85&gt;&quot;arg1&quot;&lt;/color&gt;, &lt;color=#D69D85&gt;&quot;arg2&quot;&lt;/color&gt;); &lt;color=#57A64A&gt; // 词条内包含 3 个占位符 {0} {1} {2}&lt;/color&gt;" />
+    <String Key="Usage.HowToChangeLanguage" Value="&lt;b&gt;如何在运行时更改语言？&lt;/b&gt;" />
     <String Key="Usage.Manual" Value="&lt;b&gt;手动赋值：&lt;/b&gt;" />
     <String Key="Usage.Necessary" Value="&lt;b&gt;必要的:&lt;/b&gt;\n将 &lt;b&gt;Any Localization&lt;/b&gt; 组件添加到你的第一个场景中。" />
   </Dictionary>

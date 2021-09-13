@@ -1,21 +1,25 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Dictionaries>
   <Dictionary Language="Japanese">
+    <String Key="AnyLocalization.Demo" Value="Any Localization - デモプログラム" />
+    <String Key="AnyLocalization.OnlineDocument" Value="&lt;b&gt;オンラインドキュメント&lt;/b&gt;\nより詳細な説明は、オンライン文書を参照してください：&lt;color=#569CD6&gt;{0}&lt;/color&gt;" />
     <String Key="AnyLocalization.Website" Value="https://gorh.cn/any-localization" />
     <String Key="Dialog.AskQuitGame.Message" Value="ゲームの終了を確認しますか？" />
     <String Key="Dialog.AskQuitGame.Title" Value="終了する確認" />
     <String Key="Dialog.CancelButton" Value="取り消し" />
     <String Key="Dialog.ConfirmButton" Value="を選択します" />
-    <String Key="Edit.HowToEditLanguages" Value="" />
-    <String Key="Edit.HowToEditDictionary" Value="" />
-    <String Key="Game.Name" Value="Any Localization - デモプログラム" />
-    <String Key="Game.Overview" Value="&lt;b&gt;概要&lt;/b&gt;\nAny Localization は軽量級の Unity プラグインで、Unityアプリケーションのテキストローカライズ作業を迅速に行うことができます。Any Localization は  &lt;b&gt;高度モジュール化&lt;/b&gt;、&lt;b&gt;インタラクティブ友好&lt;/b&gt;、&lt;b&gt;拡張しやすいという&lt;/b&gt;  特徴を持っています。独立して使ってもいいし、どんなフレームにも簡単に組み込むことができます。" />
+    <String Key="Edit.HowToEditEntries" Value="&lt;b&gt;フレーズはどう編集しますか？&lt;/b&gt;\n 1.メニューバーで Window&gt;Any Localization\n 2.XML Dictionary Path を指定して (デフォルトの位置は AnyLocalization / Dictionary フォルダ) を開いて、エディタでフレーズを確認して編集することができます。すべての辞書を xlsx ファイルとしてエクスポートし、Excel を使って編集することもできます。" />
+    <String Key="Edit.HowToEditLanguages" Value="&lt;b&gt;どのように言語を追加/削除しますか？&lt;/b&gt;\nは Any Localization 編集ウィンドウで Languges ボタン（右上隅）をクリックし、新しいウィンドウで使用する言語を選択します。データセキュリティのために、言語を削除する場合は、XML DictorryPath をリソースマネージャから手動で削除してください。言語タイプに対応するXMLファイルを削除してください。" />
+    <String Key="Edit.Overview" Value="&lt;b&gt;概要&lt;/b&gt;\nAny Localization は軽量級の Unity プラグインで、Unityアプリケーションのテキストローカライズ作業を迅速に行うことができます。Any Localization は  &lt;b&gt;高度モジュール化&lt;/b&gt;、&lt;b&gt;インタラクティブ友好&lt;/b&gt;、&lt;b&gt;拡張しやすいという&lt;/b&gt;  特徴を持っています。独立して使ってもいいし、どんなフレームにも簡単に組み込むことができます。" />
     <String Key="Menu.Edit" Value="編集" />
     <String Key="Menu.Usage" Value="使い方" />
-    <String Key="Setting.Language" Value="" />
-    <String Key="Setting.LanguageTips" Value="" />
+    <String Key="Setting.Language" Value="言語" />
     <String Key="Usage.Auto" Value="&lt;b&gt;自動代入:&lt;/b&gt;\n &lt;b&gt;Text&lt;/b&gt; / &lt;b&gt;TexMesh Pro&lt;/b&gt; / &lt;b&gt;TexMesh ProUGUI&lt;/b&gt; コンポーネントの後ろに &lt;b&gt;Auto Localization&lt;/b&gt; コンポーネントを追加して、あなたが欲しいkeyを選択します。" />
     <String Key="Usage.Code" Value="&lt;color=#569CD6&gt;using&lt;/color&gt; AnyLocalization; \ntext = &lt;color=#4EC9B0&gt;ANL&lt;/color&gt;.&lt;color=#DCDCAA&gt;GetString&lt;/color&gt;(&lt;color=#D69D85&gt;&quot;key&quot;&lt;/color&gt;);" />
+    <String Key="Usage.CodeWith1Placeholder" Value="text = &lt;color=#4EC9B0&gt;ANL&lt;/color&gt;.&lt;color=#DCDCAA&gt;GetString&lt;/color&gt;(&lt;color=#D69D85&gt;&quot;key&quot;&lt;/color&gt;, &lt;color=#D69D85&gt;&quot;arg0&quot;&lt;/color&gt;); &lt;color=#57A64A&gt; // エントリは 1 プレースホルダ {0} を含んでいる&lt;/color&gt;" />
+    <String Key="Usage.CodeWith2Placeholder" Value="text = &lt;color=#4EC9B0&gt;ANL&lt;/color&gt;.&lt;color=#DCDCAA&gt;GetString&lt;/color&gt;(&lt;color=#D69D85&gt;&quot;key&quot;&lt;/color&gt;, &lt;color=#D69D85&gt;&quot;arg0&quot;&lt;/color&gt;, &lt;color=#D69D85&gt;&quot;arg1&quot;&lt;/color&gt;); &lt;color=#57A64A&gt; // エントリは 2 つのプレースホルダ {0} {1} を含んでいます&lt;/color&gt;" />
+    <String Key="Usage.CodeWith3Placeholder" Value="text = &lt;color=#4EC9B0&gt;ANL&lt;/color&gt;.&lt;color=#DCDCAA&gt;GetString&lt;/color&gt;(&lt;color=#D69D85&gt;&quot;key&quot;&lt;/color&gt;, &lt;color=#D69D85&gt;&quot;arg0&quot;&lt;/color&gt;, &lt;color=#D69D85&gt;&quot;arg1&quot;&lt;/color&gt;, &lt;color=#D69D85&gt;&quot;arg2&quot;&lt;/color&gt;); &lt;color=#57A64A&gt; // エントリは 3 つのプレースホルダ {0} {1} {2} を含んでいます&lt;/color&gt;" />
+    <String Key="Usage.HowToChangeLanguage" Value="&lt;b&gt;どうやって実行中に言語を変更しますか？&lt;/b&gt;" />
     <String Key="Usage.Manual" Value="&lt;b&gt;手動代入:&lt;/b&gt;" />
     <String Key="Usage.Necessary" Value="&lt;b&gt;必要:&lt;/b&gt;\n&lt;b&gt;Any Localization&lt;/b&gt; をあなたの最初の場面に加えてください。" />
   </Dictionary>

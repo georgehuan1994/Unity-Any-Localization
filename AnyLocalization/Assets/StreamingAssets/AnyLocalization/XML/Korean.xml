@@ -1,21 +1,25 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Dictionaries>
   <Dictionary Language="Korean">
+    <String Key="AnyLocalization.Demo" Value="Any Localization - 데모 프로그램" />
+    <String Key="AnyLocalization.OnlineDocument" Value="&lt;b&gt;온라인 문서&lt;/b&gt;\n더 자세 한 설명 은 온라인 문 서 를 보십시오: &lt;color=#569CD6&gt;{0}&lt;/color&gt;" />
     <String Key="AnyLocalization.Website" Value="https://gorh.cn/any-localization" />
     <String Key="Dialog.AskQuitGame.Message" Value="게임 로그아웃을 원하십니까?" />
     <String Key="Dialog.AskQuitGame.Title" Value="아웃 확인" />
     <String Key="Dialog.CancelButton" Value="취소" />
     <String Key="Dialog.ConfirmButton" Value="확인" />
-    <String Key="Edit.HowToEditLanguages" Value="" />
-    <String Key="Edit.HowToEditDictionary" Value="" />
-    <String Key="Game.Name" Value="Any Localization - 데모 프로그램" />
-    <String Key="Game.Overview" Value="&lt;b&gt;개술&lt;/b&gt;\nAny Localization 은 경량급 Unity 플러그 인 으로 Unity 프로그램의 텍스트 현지 화 작업 을 빠르게 수행 할 수 있 습 니 다. Any Localization 은 &lt;b&gt;고도 모듈 화&lt;/b&gt;, &lt;b&gt;상호작용 우호&lt;/b&gt;, &lt;b&gt;확장 이 용이 하 다&lt;/b&gt; 는 특징 을 가지 고 있 습 니 다. 독립 적 으로 사용 할 수도 있 고 모든 프레임 에 쉽게 끼 워 넣 을 수도 있 습 니 다." />
+    <String Key="Edit.HowToEditEntries" Value="&lt;b&gt; 단 어 를 어떻게 편집 합 니까? &lt;/b&gt;\n1. 메뉴 표시 줄 에서 Window &gt; Any Localization \n2. XML Dictionary Path (기본 위 치 는 Any Localization / Dictionary 폴 더) 를 지정 하면 편집기 에서 단 어 를 보고 편집 할 수 있 습 니 다.모든 사전 을 xlsx 파일 로 내 보 내 고 Excel 로 편집 할 수 있 습 니 다." />
+    <String Key="Edit.HowToEditLanguages" Value="&lt;b&gt;어떤 언어 를 추가 / 삭제 하 는 방법? &lt;/b&gt; \nAny Localization 편집 창 에서 Languages 단추 (오른쪽 상단) 를 누 른 다음 새 창 에서 사용 할 언어 를 선택 하 십시오.데이터 보안 을 위해 어떤 언어 를 삭제 하려 면 자원 관리자 에서 XML Dictionary Path 에서 언어 형식 에 대응 하 는 XML 파일 을 수 동 으로 삭제 하 십시오." />
+    <String Key="Edit.Overview" Value="&lt;b&gt;개술&lt;/b&gt;\nAny Localization 은 경량급 Unity 플러그 인 으로 Unity 프로그램의 텍스트 현지 화 작업 을 빠르게 수행 할 수 있 습 니 다. Any Localization 은 &lt;b&gt;고도 모듈 화&lt;/b&gt;, &lt;b&gt;상호작용 우호&lt;/b&gt;, &lt;b&gt;확장 이 용이 하 다&lt;/b&gt; 는 특징 을 가지 고 있 습 니 다. 독립 적 으로 사용 할 수도 있 고 모든 프레임 에 쉽게 끼 워 넣 을 수도 있 습 니 다." />
     <String Key="Menu.Edit" Value="편집 하 다." />
     <String Key="Menu.Usage" Value="사용 방법" />
     <String Key="Setting.Language" Value="언어" />
-    <String Key="Setting.LanguageTips" Value="사용언어를 바꾼후 리부팅이 필요 합니다" />
     <String Key="Usage.Auto" Value="&lt;b&gt;자동 할당:&lt;/b&gt;\n &lt;b&gt;Text&lt;/b&gt; / &lt;b&gt;TexMesh Pro&lt;/b&gt; / &lt;b&gt;TexMesh ProUGUI&lt;/b&gt; 구성 요소 뒤에 &lt;b&gt;Auto Localization&lt;/b&gt; 구성 요 소 를 추가 하고 원 하 는 key 를 선택 하 십시오." />
     <String Key="Usage.Code" Value="&lt;color=#569CD6&gt;using&lt;/color&gt; AnyLocalization; \ntext = &lt;color=#4EC9B0&gt;ANL&lt;/color&gt;.&lt;color=#DCDCAA&gt;GetString&lt;/color&gt;(&lt;color=#D69D85&gt;&quot;key&quot;&lt;/color&gt;);" />
+    <String Key="Usage.CodeWith1Placeholder" Value="text = &lt;color=#4EC9B0&gt;ANL&lt;/color&gt;.&lt;color=#DCDCAA&gt;GetString&lt;/color&gt;(&lt;color=#D69D85&gt;&quot;key&quot;&lt;/color&gt;, &lt;color=#D69D85&gt;&quot;arg0&quot;&lt;/color&gt;); &lt;color=#57A64A&gt; // 이 항목 은 자리 표시 자 {0} 을 포함 합 니 다.&lt;/color&gt;" />
+    <String Key="Usage.CodeWith2Placeholder" Value="text = &lt;color=#4EC9B0&gt;ANL&lt;/color&gt;.&lt;color=#DCDCAA&gt;GetString&lt;/color&gt;(&lt;color=#D69D85&gt;&quot;key&quot;&lt;/color&gt;, &lt;color=#D69D85&gt;&quot;arg0&quot;&lt;/color&gt;, &lt;color=#D69D85&gt;&quot;arg1&quot;&lt;/color&gt;); &lt;color=#57A64A&gt; // 이 항목 은 2 개의 자리 표시 자 {0} {1} 를 포함 합 니 다.&lt;/color&gt;" />
+    <String Key="Usage.CodeWith3Placeholder" Value="text = &lt;color=#4EC9B0&gt;ANL&lt;/color&gt;.&lt;color=#DCDCAA&gt;GetString&lt;/color&gt;(&lt;color=#D69D85&gt;&quot;key&quot;&lt;/color&gt;, &lt;color=#D69D85&gt;&quot;arg0&quot;&lt;/color&gt;, &lt;color=#D69D85&gt;&quot;arg1&quot;&lt;/color&gt;, &lt;color=#D69D85&gt;&quot;arg2&quot;&lt;/color&gt;); &lt;color=#57A64A&gt; // 이 항목 은 3 개의 자리 표시 자 {0} {1} {2} 를 포함 합 니 다.&lt;/color&gt;" />
+    <String Key="Usage.HowToChangeLanguage" Value="&lt;b&gt;실행 중 언어 변경 방법?&lt;/b&gt;" />
     <String Key="Usage.Manual" Value="&lt;b&gt;수 동 할당:&lt;/b&gt;" />
     <String Key="Usage.Necessary" Value="&lt;b&gt;필요했어:&lt;/b&gt;\n&lt;b&gt;Any Localization&lt;/b&gt; 을 첫 번 째 장면 에 추가 합 니 다." />
   </Dictionary>
