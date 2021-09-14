@@ -1,10 +1,11 @@
 ﻿
 // Any Localization - © 2020-2021 George Huan. All rights reserved
-// http://gorh.cn/any-localization/
+// https://gorh.cn/any-localization/
 
 
 using System.Collections.Generic;
 using System.IO;
+using System.Text;
 using System.Xml;
 using UnityEngine;
 using UnityEngine.Networking;
@@ -60,15 +61,35 @@ namespace AnyLocalization
             Debug.Log($"XML Stream Path: {xmlStreamPath}");
             Debug.Log("Loading Languages XML Stream....");
 
-            if (Utility.IsAndroid())
+            if (Utility.IsAndroid() || Utility.IsWebGL())
             {
-                int frame = 0;
-                UnityWebRequest request = new UnityWebRequest(xmlStreamPath);
-                while (!request.isDone)
+                UnityWebRequest request = UnityWebRequest.Get(xmlStreamPath);
+                request.SendWebRequest();
+                while (true)
                 {
-                    if (++frame >= 500) return;
+                    if (request.isHttpError || request.isNetworkError)
+                    {
+                        Debug.LogError(request.error);
+                        return;
+                    }
+
+                    if (request.isDone)
+                    {
+                        string xmlStr = request.downloadHandler.text;
+
+                        // Remove XML Bom 
+                        string _byteOrderMarkUtf8 = Encoding.UTF8.GetString(Encoding.UTF8.GetPreamble());
+                        if (xmlStr.StartsWith(_byteOrderMarkUtf8))
+                        {
+                            Debug.Log("Remove XML Bom");
+                            int lastIndexOfUtf8 = _byteOrderMarkUtf8.Length;
+                            xmlStr = xmlStr.Remove(0, lastIndexOfUtf8);
+                        }
+
+                        xmlDocument.LoadXml(xmlStr);
+                        break;
+                    }
                 }
-                xmlDocument.Load(request.downloadHandler.text);
             }
             else
             {

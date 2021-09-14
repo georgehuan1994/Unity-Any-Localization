@@ -1,6 +1,6 @@
 ﻿
 // Any Localization - © 2020-2021 George Huan. All rights reserved
-// http://gorh.cn/any-localization/
+// https://gorh.cn/any-localization/
 
 
 using TMPro;

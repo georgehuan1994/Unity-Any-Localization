@@ -50,7 +50,15 @@ namespace AnyLocalization
             return false;
         }
 
-        
+        public static bool IsWebGL()
+        {
+            if (Application.platform == RuntimePlatform.WebGLPlayer)
+            {
+                return true;
+            }
+            return false;
+        }
+
         public static string Format(string format, object arg0)
         {
             if (format == null)
