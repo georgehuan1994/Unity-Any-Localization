@@ -3,6 +3,7 @@
 // https://gorh.cn/any-localization/
 
 
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
@@ -61,13 +62,13 @@ namespace AnyLocalization
             Debug.Log($"XML Stream Path: {xmlStreamPath}");
             Debug.Log("Loading Languages XML Stream....");
 
-            if (Utility.IsAndroid() || Utility.IsWebGL())
+            if (Utility.IsAndroid())
             {
-                UnityWebRequest request = UnityWebRequest.Get(xmlStreamPath);
+                var request = UnityWebRequest.Get(xmlStreamPath);
                 request.SendWebRequest();
                 while (true)
                 {
-                    if (request.isHttpError || request.isNetworkError)
+                    if (request.result.Equals(UnityWebRequest.Result.ConnectionError))
                     {
                         Debug.LogError(request.error);
                         return;
@@ -90,6 +91,11 @@ namespace AnyLocalization
                         break;
                     }
                 }
+            }
+            else if (Utility.IsWebGL())
+            {
+                Debug.Log("Is WebGL Player");
+                GetXml();
             }
             else
             {
@@ -116,6 +122,23 @@ namespace AnyLocalization
                 strKeyValuePairs.Add(key, value);
             }
             Debug.Log("Load Simple Languages XML Succeed.");
+        }
+
+        IEnumerator GetXml()
+        {
+            Debug.Log($"请求开始！");
+            var request = UnityWebRequest.Get($"{Application.streamingAssetsPath}/{StreamPath}/{Language}.xml");
+            yield return request.SendWebRequest();
+
+            if (request.isDone)
+            {
+                Debug.Log($"请求完成！");
+                Debug.Log($"text：{request.downloadHandler.text}");
+            }
+            else
+            {
+                Debug.LogError($"请求失败！");
+            }
         }
 
         public void SetLanguage(Language language)
