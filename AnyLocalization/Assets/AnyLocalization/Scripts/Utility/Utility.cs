@@ -59,6 +59,20 @@ namespace AnyLocalization
             return false;
         }
 
+        public static string RemoveXMLBom(string xmlStream)
+        {
+            // Remove XML Bom 
+            string _byteOrderMarkUtf8 = Encoding.UTF8.GetString(Encoding.UTF8.GetPreamble());
+            if (xmlStream.StartsWith(_byteOrderMarkUtf8))
+            {
+                Debug.Log("Remove XML Bom");
+                int lastIndexOfUtf8 = _byteOrderMarkUtf8.Length;
+                xmlStream = xmlStream.Remove(0, lastIndexOfUtf8);
+            }
+
+            return xmlStream;
+        }
+
         public static string Format(string format, object arg0)
         {
             if (format == null)

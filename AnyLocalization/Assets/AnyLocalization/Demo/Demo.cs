@@ -15,7 +15,7 @@ public class Demo : MonoBehaviour
     private void Start()
     {
         SetDropdownValue();
-        m_SeeOnlineDocument.text = ANL.GetString("AnyLocalization.OnlineDocument", ANL.GetString("AnyLocalization.Website"));
+        RefreshCustomText();
     }
 
     public void SetDropdownValue()
@@ -69,7 +69,6 @@ public class Demo : MonoBehaviour
                 ANL.SetLanguage(ANL.DefaultLanguage);
                 break;
         }
-        m_SeeOnlineDocument.text = ANL.GetString("AnyLocalization.OnlineDocument", ANL.GetString("AnyLocalization.Website"));
     }
 
     public void Quit()
@@ -78,6 +77,16 @@ public class Demo : MonoBehaviour
         UnityEditor.EditorApplication.isPlaying = false;
         #endif
         Application.Quit();
+    }
+
+    public void ShowText()
+    {
+        RefreshCustomText();
+    }
+
+    private void RefreshCustomText()
+    {
+        m_SeeOnlineDocument.text = ANL.GetString("AnyLocalization.OnlineDocument", ANL.GetString("AnyLocalization.Website"));
     }
 }
 

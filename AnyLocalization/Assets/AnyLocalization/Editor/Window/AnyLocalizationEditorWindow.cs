@@ -592,15 +592,15 @@ namespace AnyLocalization
             IEnumerable<char> distinctList = @default.Distinct();
             string characters = string.Join("", distinctList);
 
-            Debug.Log(@default);
+            //Debug.Log(@default);
             Debug.Log(characters);
 
-            string path = Application.dataPath + "/GameMain/Fonts/Custom Characters.txt";
-            StreamWriter sw = File.CreateText(path);
-            sw.Write(characters);
-            sw.Close();
+            //string path = XMLDictionariesPath + "Custom Characters.txt";
+            //StreamWriter sw = File.CreateText(path);
+            //sw.Write(characters);
+            //sw.Close();
 
-            AssetDatabase.Refresh();
+            //AssetDatabase.Refresh();
         }
 
         /// <summary>

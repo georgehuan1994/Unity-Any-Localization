@@ -36,6 +36,10 @@ namespace AnyLocalization
         /// </summary>
         public Language Language { get; set; }
 
+        private string xmlStreamPath = string.Empty;
+
+        private XmlDocument xmlDocument = new XmlDocument();
+
         private void Awake()
         {
             Instance = this;
@@ -56,13 +60,16 @@ namespace AnyLocalization
 
         private void LoadXmlStream()
         {
-            XmlDocument xmlDocument = new XmlDocument();
-
-            string xmlStreamPath = $"{Application.streamingAssetsPath}/{StreamPath}/{Language}.xml";
+            xmlStreamPath = $"{Application.streamingAssetsPath}/{StreamPath}/{Language}.xml";
             Debug.Log($"XML Stream Path: {xmlStreamPath}");
             Debug.Log("Loading Languages XML Stream....");
 
-            if (Utility.IsAndroid())
+            if (Utility.IsWebGL())
+            {
+                StartCoroutine(LoadXmlStreamAsyn());
+                return;
+            }
+            else if (Utility.IsAndroid())
             {
                 var request = UnityWebRequest.Get(xmlStreamPath);
                 request.SendWebRequest();
@@ -76,32 +83,39 @@ namespace AnyLocalization
 
                     if (request.isDone)
                     {
-                        string xmlStr = request.downloadHandler.text;
-
-                        // Remove XML Bom 
-                        string _byteOrderMarkUtf8 = Encoding.UTF8.GetString(Encoding.UTF8.GetPreamble());
-                        if (xmlStr.StartsWith(_byteOrderMarkUtf8))
-                        {
-                            Debug.Log("Remove XML Bom");
-                            int lastIndexOfUtf8 = _byteOrderMarkUtf8.Length;
-                            xmlStr = xmlStr.Remove(0, lastIndexOfUtf8);
-                        }
-
-                        xmlDocument.LoadXml(xmlStr);
+                        xmlDocument.LoadXml(Utility.RemoveXMLBom(request.downloadHandler.text));
                         break;
                     }
                 }
-            }
-            else if (Utility.IsWebGL())
-            {
-                Debug.Log("Is WebGL Player");
-                GetXml();
             }
             else
             {
                 if (File.Exists(xmlStreamPath)) xmlDocument.Load(xmlStreamPath);
             }
 
+            CreateDictionary();
+        }
+
+        private IEnumerator LoadXmlStreamAsyn()
+        {
+            var request = UnityWebRequest.Get(xmlStreamPath);
+            yield return request.SendWebRequest();
+
+            if (request.isDone)
+            {
+                Debug.Log($"Request is done！");
+                xmlDocument.LoadXml(Utility.RemoveXMLBom(request.downloadHandler.text));
+                CreateDictionary();
+                RefreshText();
+            }
+            else
+            {
+                Debug.LogError($"Request failure！{request.error}");
+            }
+        }
+
+        private void CreateDictionary()
+        {
             XmlNodeList xmlNodeList = null;
 
             try
@@ -124,29 +138,16 @@ namespace AnyLocalization
             Debug.Log("Load Simple Languages XML Succeed.");
         }
 
-        IEnumerator GetXml()
-        {
-            Debug.Log($"请求开始！");
-            var request = UnityWebRequest.Get($"{Application.streamingAssetsPath}/{StreamPath}/{Language}.xml");
-            yield return request.SendWebRequest();
-
-            if (request.isDone)
-            {
-                Debug.Log($"请求完成！");
-                Debug.Log($"text：{request.downloadHandler.text}");
-            }
-            else
-            {
-                Debug.LogError($"请求失败！");
-            }
-        }
-
         public void SetLanguage(Language language)
         {
             Language = language;
             PlayerPrefs.SetInt("Setting.Language", (int)language);
             LoadXmlStream();
+            RefreshText();
+        }
 
+        private void RefreshText()
+        {
             Scene scene = SceneManager.GetActiveScene();
             foreach (var obj in scene.GetRootGameObjects())
             {
