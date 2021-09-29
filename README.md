@@ -1,6 +1,9 @@
-# Unity-Any-Localization
+# Unity Any Localization
 
 在线文档：https://gorh.cn/any-localization/
+
+![2021-09-18_110636](https://user-images.githubusercontent.com/49583943/135221816-5588d14f-d0c6-4622-bcc4-342119f734b6.png)
+
 
 <h3 id="what-is-any-localization">Any Localization 是什么</h3>
 Any Localization 是一款轻量级的 Unity 插件，可帮助您快速地完成 Unity 应用程序的文本本地化工作。
