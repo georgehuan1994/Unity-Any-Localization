@@ -75,7 +75,7 @@ namespace AnyLocalization
                 request.SendWebRequest();
                 while (true)
                 {
-                    if (request.result.Equals(UnityWebRequest.Result.ConnectionError))
+                    if (request.isNetworkError)
                     {
                         Debug.LogError(request.error);
                         return;
