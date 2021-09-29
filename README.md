@@ -22,17 +22,15 @@ Unity Editor、Windows、Linux Player、PS4、Xbox One、Switch、macOS、iOS、
 
 1. 使用 2019.4 以上版本的 Unity，创建一个新项目
 
-2. 打开 Asset Store 面板，进入 **Any Localization** 页面，点击 **Download** 按钮，然后点击 **Import** 按钮
+2. 导入 **.unitypackage**，在 **Import unity package** 弹窗中，确保所有资产都被选中后，点击 **Import** 按钮
+ 
+3. 在 Unity 菜单栏上找到 **Window > Any Localization**，点击将打开 Any Localization 编辑窗口
 
-3. 在 **Import unity package** 弹窗中，确保所有资产都被选中后，点击 **Import** 按钮
+4. 在 Any Localization 编辑窗口中，选择 **XML Dictionary Path**（字典默认存放在**AnyLocalization / Dictionaries** 文件夹），若路径正确，编辑功能将完全解锁
 
-4. 在 Unity 菜单栏上找到 **Window > Any Localization**，点击将打开 Any Localization 编辑窗口
+5. 在 Any Localization 编辑窗口中，点击 **Save to StreamingAssets**，这些 XML 文件会保存到 **StreamingAssets/AnyLocalization/XML** 目录。
 
-5. 在 Any Localization 编辑窗口中，选择 **XML Dictionary Path**（字典默认存放在**AnyLocalization / Dictionaries** 文件夹），若路径正确，编辑功能将完全解锁
-
-6. 在 Any Localization 编辑窗口中，点击 **Save to StreamingAssets**，这些 XML 文件会保存到 **StreamingAssets/AnyLocalization/XML** 目录。
-
-7. 打开 Demo 场景，点击 **Play**，查看演示程序
+6. 打开 Demo 场景，点击 **Play**，查看演示程序
 
 
 ![_2021-09-28_11-02-39](https://user-images.githubusercontent.com/49583943/135222116-5f4b3338-a136-4395-81d0-be77b51e91f7.png)
